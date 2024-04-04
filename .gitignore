@@ -1,0 +1,5 @@
+
+target/
+dbt_packages/
+logs/
+dbt-e-com-sales-ec3259e5e9a2.json
