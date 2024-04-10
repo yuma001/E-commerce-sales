@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: ecom_raw_data # how you'll refer to it in dbt
+    database: dbt-e-com-sales # bigquery project
+    schema: raw_datasets # bigquery dataset
+    tables:
+      - name: raw_PL_march_2021
+      - name: raw_amazon_sale_report
+      - name: raw_cloud_warehouse_compersion_chart
+      - name: raw_international_sales_cleaned
+      - name: raw_may_2022
+      - name: raw_sale_report
+    

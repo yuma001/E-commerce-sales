@@ -32,6 +32,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   dbt_ecom_sales:
-    # Config indicated by + and applies to all files under models/example/
-    example:
+    Staging:
       +materialized: view
+    intermediate:
+      +materialized: view
+    mart:
+      +materialized: "{{ 'table' if target.name == 'prod' else 'view' }}"
