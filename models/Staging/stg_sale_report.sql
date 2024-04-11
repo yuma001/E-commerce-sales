@@ -6,9 +6,9 @@ source as(
 renamed as (
   select
       SKU_Code as SKU,
-      Category,
-      Size,
-      Color as Colour
+      Category as category,
+      Size as size,
+      Color as colour
   from source
   where SKU_Code is not null 
     and SKU_Code <> "#REF!"
